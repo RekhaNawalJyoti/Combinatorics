@@ -1,0 +1,55 @@
+def multitoregular(M=[] ,L=[]):
+    m=max(M)
+    n=len(M)
+    k=0
+    s=0
+    z=0
+    N=[]
+    K=[]
+    if(m!=len(L)):
+        print("Number mismatch!!")
+       
+    
+     
+    else:
+         
+         a=[]
+         for i in range(m):
+           s=s+max(L[i])
+           if(M.count(i+1)!=max(L[i])):
+             print("Error")
+           else:
+             a.append(max(L[i]))
+         if(s!=n):
+            print("length mismatch!!")
+        
+         
+         else:
+             for i in range(m):
+              for j in range(a[i]):
+                  K.append(M.index(i+1))
+                  M[M.index(i+1)]='a'
+             
+         
+   
+             for i in range(m):
+                if(i>0):
+                   k=k+a[i-1]
+               
+
+                
+                for j in range(a[i]):
+                
+                    L[i][j]=k + L[i][j]
+                    
+                for y in range(a[i]):
+                  
+                   
+                    M[K[z]]=L[i][y]
+                    z=z+1
+
+
+         return M            
+           
+   
+     
